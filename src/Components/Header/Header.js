@@ -25,6 +25,10 @@ export const Navigation = styled.nav`
     justify-content: space-between;
     padding-right: 3rem;
 
+    @media(max-width: 945px){
+        display: none;
+    }
+    
     ul{
         display: flex;
         justify-content: space-between;
@@ -53,6 +57,12 @@ export const Navigation = styled.nav`
         &:hover{
             opacity: .6;
         }
+
+        @media(max-width: 1230px){
+            width: 100px;
+            font-size: .7rem;
+            margin-right: 10px;
+        }
     }
 
 `
@@ -71,6 +81,14 @@ export const ContainerFilm = styled.div`
         width: 60%;
         border-radius: 5px;
         color: white;
+
+        @media(max-width: 1170px){
+            width: 50%;
+        }
+
+        @media(max-width: 940px){
+            margin-right: 10px;
+        }
     }
 
     div{
