@@ -98,9 +98,32 @@ export const ContainerFilm = styled.div`
 `
 
 export const Categories = styled.div`
-    width: 300px;
+    width: 240px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: 30px;
     cursor: pointer;
+    transition: .6s all;
+`
+
+export const Dropdown = styled.ol`
+    padding: 1rem;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li{
+        padding: 0.4rem;
+        border-radius: 2px;
+        &:hover{
+            opacity: 1;
+            background-color: #2C2C2C;
+        }
+    }
 `

@@ -13,7 +13,7 @@ const GlobalStyled = createGlobalStyle`
         color: white;
     }
 
-    ul{
+    ul, ol{
         list-style: none;
     }
 

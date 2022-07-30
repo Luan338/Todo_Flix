@@ -29,6 +29,13 @@ export const Informations = styled.div`
             width: 30px;
             height: 30px;
             cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        h2{
+            font-size: 2.5rem;
         }
 
         div{
@@ -42,4 +49,28 @@ export const Informations = styled.div`
             }
         }
 
+`
+export const BoxCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 1900px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    padding-left: 1.2rem;
+
+    h2{
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+`
+
+export const Highlights = styled.section`
+    margin-top: 2rem;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
 `
