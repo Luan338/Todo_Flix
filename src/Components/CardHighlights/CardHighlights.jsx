@@ -9,6 +9,7 @@ export default function CardHighlights({ movie }) {
         <Card>
             <Imgs src={imageURL + movie.poster_path} alt={movie.title} />
             <h2>{movie.title}</h2>
+            <p>Visualizações: {movie.popularity}</p>
         </Card>
     )
 }
