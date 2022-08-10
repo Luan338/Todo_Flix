@@ -2,11 +2,11 @@ import React from 'react';
 import Group from '../../assets/group.png';
 import Favorite from '../../assets/imagem1.svg';
 import Like from '../../assets/imagem6.svg';
-
 import { useEffect, useState } from 'react';
-import { Container, ImageMain, Informations, Highlights, BoxCard } from './Dashboard.js';
+import { Container, ImageMain, Informations, Highlights, BoxCard, RigthArrow, Wrapper, CarouselStyled } from './Dashboard.js';
 import CardHighlights from '../../Components/CardHighlights/CardHighlights.jsx';
-import { SpinnerGap } from 'phosphor-react';
+import { SpinnerGap, CaretRight, CaretLeft } from 'phosphor-react';
+import Carousel from 'react-elastic-carousel';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -28,7 +28,7 @@ export default function Dashboard() {
     }, [])
 
     return (
-        <>
+        <Wrapper>
             <Container>
                 <figure>
                     <ImageMain src={Group} alt="Imagem Inicio" />
@@ -51,15 +51,24 @@ export default function Dashboard() {
             <BoxCard>
                 <h2>Destaques</h2>
                 <Highlights>
+                <Carousel {...CarouselStyled}>
                     {topMovies === 0 && <SpinnerGap size={32} color="#ffffff" />}
-                    {topMovies && topMovies.map((movie) => (
-                        <CardHighlights
-                            key={movie.id}
-                            movie={movie}
-                        />
-                    ))}
+                    {topMovies && topMovies.map((movie) =>{
+                        console.log(movie)
+                        return(
+                                <CardHighlights
+                                    key={movie.id}
+                                    movie={movie}
+                                />
+                        )
+                    } )}
+                </Carousel>
+                    {/* <RigthArrow>
+                        <CaretLeft size={37} color="#ffffff" weight="bold" />
+                        <CaretRight size={37} color="#ffffff" weight="bold" />
+                    </RigthArrow> */}
                 </Highlights>
             </BoxCard>
-        </>
+        </Wrapper>
     )
 }

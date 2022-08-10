@@ -21,6 +21,17 @@ const GlobalStyled = createGlobalStyle`
         text-decoration: none;
     }
 
-`
+    .rec.rec-arrow {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.rec.rec-arrow:hover {
+    border-radius: 50%;
+    background-color: red;
+}
+
+`;
 
 export default GlobalStyled;
